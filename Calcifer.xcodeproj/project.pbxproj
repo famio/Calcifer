@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D14752A0272E67FB001108BD /* CalciferApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147529F272E67FB001108BD /* CalciferApp.swift */; };
+		D14752A2272E67FB001108BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14752A1272E67FB001108BD /* ContentView.swift */; };
+		D14752A4272E67FC001108BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14752A3272E67FC001108BD /* Assets.xcassets */; };
+		D14752A7272E67FC001108BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14752A6272E67FC001108BD /* Preview Assets.xcassets */; };
+		D14752B2272E67FC001108BD /* CalciferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14752B1272E67FC001108BD /* CalciferTests.swift */; };
+		D14752BC272E67FC001108BD /* CalciferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14752BB272E67FC001108BD /* CalciferUITests.swift */; };
+		D14752BE272E67FC001108BD /* CalciferUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14752BD272E67FC001108BD /* CalciferUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D14752AE272E67FC001108BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1475294272E67FB001108BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D147529B272E67FB001108BD;
+			remoteInfo = Calcifer;
+		};
+		D14752B8272E67FC001108BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1475294272E67FB001108BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D147529B272E67FB001108BD;
+			remoteInfo = Calcifer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D147529C272E67FB001108BD /* Calcifer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calcifer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D147529F272E67FB001108BD /* CalciferApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalciferApp.swift; sourceTree = "<group>"; };
+		D14752A1272E67FB001108BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D14752A3272E67FC001108BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D14752A6272E67FC001108BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D14752A8272E67FC001108BD /* Calcifer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Calcifer.entitlements; sourceTree = "<group>"; };
+		D14752AD272E67FC001108BD /* CalciferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalciferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14752B1272E67FC001108BD /* CalciferTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalciferTests.swift; sourceTree = "<group>"; };
+		D14752B7272E67FC001108BD /* CalciferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalciferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14752BB272E67FC001108BD /* CalciferUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalciferUITests.swift; sourceTree = "<group>"; };
+		D14752BD272E67FC001108BD /* CalciferUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalciferUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1475299272E67FB001108BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D14752AA272E67FC001108BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D14752B4272E67FC001108BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1475293272E67FB001108BD = {
+			isa = PBXGroup;
+			children = (
+				D147529E272E67FB001108BD /* Calcifer */,
+				D14752B0272E67FC001108BD /* CalciferTests */,
+				D14752BA272E67FC001108BD /* CalciferUITests */,
+				D147529D272E67FB001108BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D147529D272E67FB001108BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D147529C272E67FB001108BD /* Calcifer.app */,
+				D14752AD272E67FC001108BD /* CalciferTests.xctest */,
+				D14752B7272E67FC001108BD /* CalciferUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D147529E272E67FB001108BD /* Calcifer */ = {
+			isa = PBXGroup;
+			children = (
+				D147529F272E67FB001108BD /* CalciferApp.swift */,
+				D14752A1272E67FB001108BD /* ContentView.swift */,
+				D14752A3272E67FC001108BD /* Assets.xcassets */,
+				D14752A8272E67FC001108BD /* Calcifer.entitlements */,
+				D14752A5272E67FC001108BD /* Preview Content */,
+			);
+			path = Calcifer;
+			sourceTree = "<group>";
+		};
+		D14752A5272E67FC001108BD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D14752A6272E67FC001108BD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D14752B0272E67FC001108BD /* CalciferTests */ = {
+			isa = PBXGroup;
+			children = (
+				D14752B1272E67FC001108BD /* CalciferTests.swift */,
+			);
+			path = CalciferTests;
+			sourceTree = "<group>";
+		};
+		D14752BA272E67FC001108BD /* CalciferUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D14752BB272E67FC001108BD /* CalciferUITests.swift */,
+				D14752BD272E67FC001108BD /* CalciferUITestsLaunchTests.swift */,
+			);
+			path = CalciferUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D147529B272E67FB001108BD /* Calcifer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D14752C1272E67FC001108BD /* Build configuration list for PBXNativeTarget "Calcifer" */;
+			buildPhases = (
+				D1475298272E67FB001108BD /* Sources */,
+				D1475299272E67FB001108BD /* Frameworks */,
+				D147529A272E67FB001108BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Calcifer;
+			productName = Calcifer;
+			productReference = D147529C272E67FB001108BD /* Calcifer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D14752AC272E67FC001108BD /* CalciferTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D14752C4272E67FC001108BD /* Build configuration list for PBXNativeTarget "CalciferTests" */;
+			buildPhases = (
+				D14752A9272E67FC001108BD /* Sources */,
+				D14752AA272E67FC001108BD /* Frameworks */,
+				D14752AB272E67FC001108BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D14752AF272E67FC001108BD /* PBXTargetDependency */,
+			);
+			name = CalciferTests;
+			productName = CalciferTests;
+			productReference = D14752AD272E67FC001108BD /* CalciferTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D14752B6272E67FC001108BD /* CalciferUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D14752C7272E67FC001108BD /* Build configuration list for PBXNativeTarget "CalciferUITests" */;
+			buildPhases = (
+				D14752B3272E67FC001108BD /* Sources */,
+				D14752B4272E67FC001108BD /* Frameworks */,
+				D14752B5272E67FC001108BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D14752B9272E67FC001108BD /* PBXTargetDependency */,
+			);
+			name = CalciferUITests;
+			productName = CalciferUITests;
+			productReference = D14752B7272E67FC001108BD /* CalciferUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1475294272E67FB001108BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					D147529B272E67FB001108BD = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					D14752AC272E67FC001108BD = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = D147529B272E67FB001108BD;
+					};
+					D14752B6272E67FC001108BD = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = D147529B272E67FB001108BD;
+					};
+				};
+			};
+			buildConfigurationList = D1475297272E67FB001108BD /* Build configuration list for PBXProject "Calcifer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1475293272E67FB001108BD;
+			productRefGroup = D147529D272E67FB001108BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D147529B272E67FB001108BD /* Calcifer */,
+				D14752AC272E67FC001108BD /* CalciferTests */,
+				D14752B6272E67FC001108BD /* CalciferUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D147529A272E67FB001108BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14752A7272E67FC001108BD /* Preview Assets.xcassets in Resources */,
+				D14752A4272E67FC001108BD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D14752AB272E67FC001108BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D14752B5272E67FC001108BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1475298272E67FB001108BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14752A2272E67FB001108BD /* ContentView.swift in Sources */,
+				D14752A0272E67FB001108BD /* CalciferApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D14752A9272E67FC001108BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14752B2272E67FC001108BD /* CalciferTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D14752B3272E67FC001108BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14752BE272E67FC001108BD /* CalciferUITestsLaunchTests.swift in Sources */,
+				D14752BC272E67FC001108BD /* CalciferUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D14752AF272E67FC001108BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D147529B272E67FB001108BD /* Calcifer */;
+			targetProxy = D14752AE272E67FC001108BD /* PBXContainerItemProxy */;
+		};
+		D14752B9272E67FC001108BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D147529B272E67FB001108BD /* Calcifer */;
+			targetProxy = D14752B8272E67FC001108BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D14752BF272E67FC001108BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D14752C0272E67FC001108BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D14752C2272E67FC001108BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Calcifer/Calcifer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Calcifer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chalingco.Calcifer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D14752C3272E67FC001108BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Calcifer/Calcifer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Calcifer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chalingco.Calcifer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D14752C5272E67FC001108BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chalingco.CalciferTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calcifer.app/Contents/MacOS/Calcifer";
+			};
+			name = Debug;
+		};
+		D14752C6272E67FC001108BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chalingco.CalciferTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calcifer.app/Contents/MacOS/Calcifer";
+			};
+			name = Release;
+		};
+		D14752C8272E67FC001108BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chalingco.CalciferUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Calcifer;
+			};
+			name = Debug;
+		};
+		D14752C9272E67FC001108BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chalingco.CalciferUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Calcifer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1475297272E67FB001108BD /* Build configuration list for PBXProject "Calcifer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14752BF272E67FC001108BD /* Debug */,
+				D14752C0272E67FC001108BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D14752C1272E67FC001108BD /* Build configuration list for PBXNativeTarget "Calcifer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14752C2272E67FC001108BD /* Debug */,
+				D14752C3272E67FC001108BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D14752C4272E67FC001108BD /* Build configuration list for PBXNativeTarget "CalciferTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14752C5272E67FC001108BD /* Debug */,
+				D14752C6272E67FC001108BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D14752C7272E67FC001108BD /* Build configuration list for PBXNativeTarget "CalciferUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14752C8272E67FC001108BD /* Debug */,
+				D14752C9272E67FC001108BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1475294272E67FB001108BD /* Project object */;
+}
