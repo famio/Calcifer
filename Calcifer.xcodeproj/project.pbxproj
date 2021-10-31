@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D145B884272E6A5800BB14AB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D145B883272E6A5800BB14AB /* ComposableArchitecture */; };
 		D14752A0272E67FB001108BD /* CalciferApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147529F272E67FB001108BD /* CalciferApp.swift */; };
 		D14752A2272E67FB001108BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14752A1272E67FB001108BD /* ContentView.swift */; };
 		D14752A4272E67FC001108BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14752A3272E67FC001108BD /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D145B884272E6A5800BB14AB /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +147,9 @@
 			dependencies = (
 			);
 			name = Calcifer;
+			packageProductDependencies = (
+				D145B883272E6A5800BB14AB /* ComposableArchitecture */,
+			);
 			productName = Calcifer;
 			productReference = D147529C272E67FB001108BD /* Calcifer.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +222,9 @@
 				Base,
 			);
 			mainGroup = D1475293272E67FB001108BD;
+			packageReferences = (
+				D145B882272E6A5800BB14AB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = D147529D272E67FB001108BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -594,6 +602,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D145B882272E6A5800BB14AB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D145B883272E6A5800BB14AB /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D145B882272E6A5800BB14AB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D1475294272E67FB001108BD /* Project object */;
 }
