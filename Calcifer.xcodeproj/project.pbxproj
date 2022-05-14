@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D12AF9FA2736F95C009F18EE /* FileManagerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AF9F92736F95C009F18EE /* FileManagerEffect.swift */; };
+		D12AF9FC2737EA93009F18EE /* PhotogrammetryEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AF9FB2737EA93009F18EE /* PhotogrammetryEffect.swift */; };
 		D145B884272E6A5800BB14AB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D145B883272E6A5800BB14AB /* ComposableArchitecture */; };
+		D145B886272EF51A00BB14AB /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D145B885272EF51A00BB14AB /* AppAction.swift */; };
+		D145B888272EF56A00BB14AB /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D145B887272EF56A00BB14AB /* AppReducer.swift */; };
+		D145B88A272EF5C400BB14AB /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D145B889272EF5C400BB14AB /* AppEnvironment.swift */; };
+		D145B88C272EF5F700BB14AB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D145B88B272EF5F700BB14AB /* AppState.swift */; };
 		D14752A0272E67FB001108BD /* CalciferApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147529F272E67FB001108BD /* CalciferApp.swift */; };
-		D14752A2272E67FB001108BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14752A1272E67FB001108BD /* ContentView.swift */; };
-		D14752A4272E67FC001108BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14752A3272E67FC001108BD /* Assets.xcassets */; };
+		D14752A2272E67FB001108BD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14752A1272E67FB001108BD /* MainView.swift */; };
+		D14752A4272E67FC001108BD /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14752A3272E67FC001108BD /* ImageAssets.xcassets */; };
 		D14752A7272E67FC001108BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14752A6272E67FC001108BD /* Preview Assets.xcassets */; };
-		D14752B2272E67FC001108BD /* CalciferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14752B1272E67FC001108BD /* CalciferTests.swift */; };
-		D14752BC272E67FC001108BD /* CalciferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14752BB272E67FC001108BD /* CalciferUITests.swift */; };
-		D14752BE272E67FC001108BD /* CalciferUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14752BD272E67FC001108BD /* CalciferUITestsLaunchTests.swift */; };
+		D1715DB52752AF580033C4A1 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1715DB42752AF580033C4A1 /* ColorAssets.xcassets */; };
+		D1715DB72752B1640033C4A1 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1715DB62752B1640033C4A1 /* Color+.swift */; };
+		D175C99E27B88BF7004A5DDD /* CalciferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175C99D27B88BF7004A5DDD /* CalciferTests.swift */; };
+		D175C9A127B88C1B004A5DDD /* CalciferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175C99F27B88C1B004A5DDD /* CalciferUITests.swift */; };
+		D175C9A227B88C1B004A5DDD /* CalciferUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175C9A027B88C1B004A5DDD /* CalciferUITestsLaunchTests.swift */; };
+		D1C023CC274C07DD0058F867 /* NSImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C023CB274C07DD0058F867 /* NSImage+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,17 +44,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D12AF9F92736F95C009F18EE /* FileManagerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerEffect.swift; sourceTree = "<group>"; };
+		D12AF9FB2737EA93009F18EE /* PhotogrammetryEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotogrammetryEffect.swift; sourceTree = "<group>"; };
+		D145B885272EF51A00BB14AB /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		D145B887272EF56A00BB14AB /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		D145B889272EF5C400BB14AB /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		D145B88B272EF5F700BB14AB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D147529C272E67FB001108BD /* Calcifer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calcifer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D147529F272E67FB001108BD /* CalciferApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalciferApp.swift; sourceTree = "<group>"; };
-		D14752A1272E67FB001108BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D14752A3272E67FC001108BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D14752A1272E67FB001108BD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D14752A3272E67FC001108BD /* ImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAssets.xcassets; sourceTree = "<group>"; };
 		D14752A6272E67FC001108BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D14752A8272E67FC001108BD /* Calcifer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Calcifer.entitlements; sourceTree = "<group>"; };
 		D14752AD272E67FC001108BD /* CalciferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalciferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D14752B1272E67FC001108BD /* CalciferTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalciferTests.swift; sourceTree = "<group>"; };
 		D14752B7272E67FC001108BD /* CalciferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalciferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D14752BB272E67FC001108BD /* CalciferUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalciferUITests.swift; sourceTree = "<group>"; };
-		D14752BD272E67FC001108BD /* CalciferUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalciferUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1715DB42752AF580033C4A1 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
+		D1715DB62752B1640033C4A1 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		D175C99D27B88BF7004A5DDD /* CalciferTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalciferTests.swift; sourceTree = "<group>"; };
+		D175C99F27B88C1B004A5DDD /* CalciferUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalciferUITests.swift; sourceTree = "<group>"; };
+		D175C9A027B88C1B004A5DDD /* CalciferUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalciferUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1C023CB274C07DD0058F867 /* NSImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +116,16 @@
 			isa = PBXGroup;
 			children = (
 				D147529F272E67FB001108BD /* CalciferApp.swift */,
-				D14752A1272E67FB001108BD /* ContentView.swift */,
-				D14752A3272E67FC001108BD /* Assets.xcassets */,
+				D14752A1272E67FB001108BD /* MainView.swift */,
+				D145B889272EF5C400BB14AB /* AppEnvironment.swift */,
+				D145B885272EF51A00BB14AB /* AppAction.swift */,
+				D145B887272EF56A00BB14AB /* AppReducer.swift */,
+				D145B88B272EF5F700BB14AB /* AppState.swift */,
+				D12AF9F92736F95C009F18EE /* FileManagerEffect.swift */,
+				D12AF9FB2737EA93009F18EE /* PhotogrammetryEffect.swift */,
+				D1C023CA274C07BF0058F867 /* extension */,
+				D14752A3272E67FC001108BD /* ImageAssets.xcassets */,
+				D1715DB42752AF580033C4A1 /* ColorAssets.xcassets */,
 				D14752A8272E67FC001108BD /* Calcifer.entitlements */,
 				D14752A5272E67FC001108BD /* Preview Content */,
 			);
@@ -117,7 +143,7 @@
 		D14752B0272E67FC001108BD /* CalciferTests */ = {
 			isa = PBXGroup;
 			children = (
-				D14752B1272E67FC001108BD /* CalciferTests.swift */,
+				D175C99D27B88BF7004A5DDD /* CalciferTests.swift */,
 			);
 			path = CalciferTests;
 			sourceTree = "<group>";
@@ -125,10 +151,19 @@
 		D14752BA272E67FC001108BD /* CalciferUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D14752BB272E67FC001108BD /* CalciferUITests.swift */,
-				D14752BD272E67FC001108BD /* CalciferUITestsLaunchTests.swift */,
+				D175C99F27B88C1B004A5DDD /* CalciferUITests.swift */,
+				D175C9A027B88C1B004A5DDD /* CalciferUITestsLaunchTests.swift */,
 			);
 			path = CalciferUITests;
+			sourceTree = "<group>";
+		};
+		D1C023CA274C07BF0058F867 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				D1715DB62752B1640033C4A1 /* Color+.swift */,
+				D1C023CB274C07DD0058F867 /* NSImage+.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,10 +240,12 @@
 					};
 					D14752AC272E67FC001108BD = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = D147529B272E67FB001108BD;
 					};
 					D14752B6272E67FC001108BD = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = D147529B272E67FB001108BD;
 					};
 				};
@@ -242,7 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D14752A7272E67FC001108BD /* Preview Assets.xcassets in Resources */,
-				D14752A4272E67FC001108BD /* Assets.xcassets in Resources */,
+				D1715DB52752AF580033C4A1 /* ColorAssets.xcassets in Resources */,
+				D14752A4272E67FC001108BD /* ImageAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,8 +305,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14752A2272E67FB001108BD /* ContentView.swift in Sources */,
+				D14752A2272E67FB001108BD /* MainView.swift in Sources */,
+				D1715DB72752B1640033C4A1 /* Color+.swift in Sources */,
 				D14752A0272E67FB001108BD /* CalciferApp.swift in Sources */,
+				D12AF9FA2736F95C009F18EE /* FileManagerEffect.swift in Sources */,
+				D145B886272EF51A00BB14AB /* AppAction.swift in Sources */,
+				D145B888272EF56A00BB14AB /* AppReducer.swift in Sources */,
+				D1C023CC274C07DD0058F867 /* NSImage+.swift in Sources */,
+				D145B88C272EF5F700BB14AB /* AppState.swift in Sources */,
+				D12AF9FC2737EA93009F18EE /* PhotogrammetryEffect.swift in Sources */,
+				D145B88A272EF5C400BB14AB /* AppEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14752B2272E67FC001108BD /* CalciferTests.swift in Sources */,
+				D175C99E27B88BF7004A5DDD /* CalciferTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14752BE272E67FC001108BD /* CalciferUITestsLaunchTests.swift in Sources */,
-				D14752BC272E67FC001108BD /* CalciferUITests.swift in Sources */,
+				D175C9A227B88C1B004A5DDD /* CalciferUITestsLaunchTests.swift in Sources */,
+				D175C9A127B88C1B004A5DDD /* CalciferUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +521,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -489,6 +536,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chalingco.CalciferTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calcifer.app/Contents/MacOS/Calcifer";
 			};
@@ -499,6 +547,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -522,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -535,6 +585,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chalingco.CalciferUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Calcifer;
 			};
@@ -544,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
