@@ -29,25 +29,23 @@ struct CalciferApp: App {
                 )
             }
             .commands {
-                CommandGroup(after: .newItem) {
+                CommandGroup(replacing: .newItem) {
                     OpenFolderCommand(viewStore: viewStore)
                 }
             }
         }
     }
+    
+    private func OpenFolderCommand(viewStore: ViewStore<AppState, AppAction>) -> some View {
+        return Button("Open Folder") {
+            viewStore.send(.openFolderMenuTapped)
+        }
+        .keyboardShortcut("o", modifiers: [.command])
+    }
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
-    
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // "File"移行のMenuを非表示にする
-        NSApplication.shared.mainMenu?.items.suffix(from: 2).forEach({ $0.isHidden = true })
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        NSWindow.allowsAutomaticWindowTabbing = false
     }
-}
-
-func OpenFolderCommand(viewStore: ViewStore<AppState, AppAction>) -> some View {
-    return Button("Open Folder") {
-        viewStore.send(.openFolderMenuTapped)
-    }
-    .keyboardShortcut("o", modifiers: [.command])
 }
