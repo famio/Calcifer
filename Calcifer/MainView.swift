@@ -74,18 +74,6 @@ struct MainView: View {
                     .disabled(viewStore.isProcessing)
                 }
                 
-                // Detail
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Detail").bold().foregroundColor(Color.secondary)
-                    Picker("Detail", selection: viewStore.binding(get: { $0.detail }, send: { .detailPickerSelected($0) })) {
-                        ForEach(Detail.allCases, id: \.self) { detail in
-                            Text(detail.title)
-                                .tag(detail)
-                        }
-                    }
-                    .disabled(viewStore.isProcessing)
-                }
-                
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Sample Orderling").bold().foregroundColor(Color.secondary)
                     Picker("Sample Orderling", selection: viewStore.binding(get: { $0.sampleOrdering }, send: { .sampleOrderingPickerSelected($0) })) {
@@ -102,6 +90,18 @@ struct MainView: View {
                     Picker("", selection: viewStore.binding(get: { $0.featureSensitivity }, send: { .featureSensitivityPickerSelected($0) })) {
                         ForEach(FeatureSensitivity.allCases, id: \.self) { detail in
                             Text(detail.title).tag(detail)
+                        }
+                    }
+                    .disabled(viewStore.isProcessing)
+                }
+                
+                // Detail
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Detail").bold().foregroundColor(Color.secondary)
+                    Picker("Detail", selection: viewStore.binding(get: { $0.detail }, send: { .detailPickerSelected($0) })) {
+                        ForEach(Detail.allCases, id: \.self) { detail in
+                            Text(detail.title)
+                                .tag(detail)
                         }
                     }
                     .disabled(viewStore.isProcessing)
