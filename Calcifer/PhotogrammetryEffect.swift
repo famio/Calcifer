@@ -118,6 +118,8 @@ extension PhotogrammetryEffect {
                                 break
                             case .processingCancelled:
                                 break
+                            case .requestProgressInfo(let request, let progressInfo):
+                                break
                             @unknown default:
                                 break
                             }
