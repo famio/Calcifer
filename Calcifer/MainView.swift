@@ -24,7 +24,7 @@ struct MainView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Input Folder").bold().foregroundColor(.secondary)
                     ZStack {
-                        Color.segmentedNormal
+                        Color(.segmentedNormal)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                         if let firstImage = viewStore.thumbnail {
                             Image(firstImage, scale: 1, label: Text("Image"))
@@ -177,7 +177,7 @@ struct GoButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .foregroundColor(isEnabled ? .primary : .secondary)
-            .background(isEnabled ? Color.goButtonEnabled : Color.clear)
+            .background(isEnabled ? Color(.goButtonEnabled) : Color.clear)
             .cornerRadius(.infinity)
             .overlay(
                 RoundedRectangle(cornerRadius: .infinity)

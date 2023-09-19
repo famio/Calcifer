@@ -16,7 +16,6 @@
 		D14752A4272E67FC001108BD /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14752A3272E67FC001108BD /* ImageAssets.xcassets */; };
 		D14752A7272E67FC001108BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14752A6272E67FC001108BD /* Preview Assets.xcassets */; };
 		D1715DB52752AF580033C4A1 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1715DB42752AF580033C4A1 /* ColorAssets.xcassets */; };
-		D1715DB72752B1640033C4A1 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1715DB62752B1640033C4A1 /* Color+.swift */; };
 		D175C99E27B88BF7004A5DDD /* CalciferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175C99D27B88BF7004A5DDD /* CalciferTests.swift */; };
 		D175C9A127B88C1B004A5DDD /* CalciferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175C99F27B88C1B004A5DDD /* CalciferUITests.swift */; };
 		D175C9A227B88C1B004A5DDD /* CalciferUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175C9A027B88C1B004A5DDD /* CalciferUITestsLaunchTests.swift */; };
@@ -54,7 +53,6 @@
 		D14752AD272E67FC001108BD /* CalciferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalciferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14752B7272E67FC001108BD /* CalciferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalciferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1715DB42752AF580033C4A1 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
-		D1715DB62752B1640033C4A1 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		D175C99D27B88BF7004A5DDD /* CalciferTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalciferTests.swift; sourceTree = "<group>"; };
 		D175C99F27B88C1B004A5DDD /* CalciferUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalciferUITests.swift; sourceTree = "<group>"; };
 		D175C9A027B88C1B004A5DDD /* CalciferUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalciferUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 		D1C023CA274C07BF0058F867 /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				D1715DB62752B1640033C4A1 /* Color+.swift */,
 				D1C023CB274C07DD0058F867 /* NSImage+.swift */,
 			);
 			path = extension;
@@ -300,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D14752A2272E67FB001108BD /* MainView.swift in Sources */,
-				D1715DB72752B1640033C4A1 /* Color+.swift in Sources */,
 				D14752A0272E67FB001108BD /* CalciferApp.swift in Sources */,
 				D12AF9FA2736F95C009F18EE /* AppFileManager.swift in Sources */,
 				D145B888272EF56A00BB14AB /* AppReducer.swift in Sources */,
