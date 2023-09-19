@@ -87,8 +87,8 @@ struct MainView: View {
 
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Feature Sensitivity").bold().foregroundColor(Color.secondary)
-                    Picker("", selection: viewStore.binding(get: { $0.featureSensitivity }, send: { .featureSensitivityPickerSelected($0) })) {
-                        ForEach(FeatureSensitivity.allCases, id: \.self) { detail in
+                    Picker("Feature Sensitivity", selection: viewStore.binding(get: { $0.featureSensitivity }, send: { .featureSensitivityPickerSelected($0) })) { 
+                        ForEach(FeatureSensitivity.candidates, id: \.self) { detail in
                             Text(detail.title).tag(detail)
                         }
                     }
