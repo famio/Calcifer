@@ -162,12 +162,14 @@ struct Photogrammetry {
             continuation.onTermination = { termination in
                 switch termination {
                 case .finished:
-                    print("finish task")
+                    logger.trace("process(session:outputDstUrl:tmpFileUrl:) termination.finished")
+
                 case .cancelled:
-                    print("cancelled")
+                    logger.trace("process(session:outputDstUrl:tmpFileUrl:) termination.cancelled")
                     session.cancel()
+
                 @unknown default:
-                    print("unknown termination: termination")
+                    logger.trace("process(session:outputDstUrl:tmpFileUrl:) termination.unknown")
                 }
             }
         }

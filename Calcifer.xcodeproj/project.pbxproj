@@ -21,6 +21,7 @@
 		D175C9A227B88C1B004A5DDD /* CalciferUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175C9A027B88C1B004A5DDD /* CalciferUITestsLaunchTests.swift */; };
 		D1ACCACC2A95A6700022288D /* Photogrammetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ACCACB2A95A6700022288D /* Photogrammetry.swift */; };
 		D1C023CC274C07DD0058F867 /* NSImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C023CB274C07DD0058F867 /* NSImage+.swift */; };
+		D1C0C45C2AB95DA600B600A2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0C45B2AB95DA600B600A2 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		D175C9A027B88C1B004A5DDD /* CalciferUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalciferUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D1ACCACB2A95A6700022288D /* Photogrammetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photogrammetry.swift; sourceTree = "<group>"; };
 		D1C023CB274C07DD0058F867 /* NSImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+.swift"; sourceTree = "<group>"; };
+		D1C0C45B2AB95DA600B600A2 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				D145B88B272EF5F700BB14AB /* AppState.swift */,
 				D12AF9F92736F95C009F18EE /* AppFileManager.swift */,
 				D1ACCACB2A95A6700022288D /* Photogrammetry.swift */,
+				D1C0C45B2AB95DA600B600A2 /* Logger.swift */,
 				D1C023CA274C07BF0058F867 /* extension */,
 				D14752A3272E67FC001108BD /* ImageAssets.xcassets */,
 				D1715DB42752AF580033C4A1 /* ColorAssets.xcassets */,
@@ -303,6 +306,7 @@
 				D1C023CC274C07DD0058F867 /* NSImage+.swift in Sources */,
 				D145B88C272EF5F700BB14AB /* AppState.swift in Sources */,
 				D1ACCACC2A95A6700022288D /* Photogrammetry.swift in Sources */,
+				D1C0C45C2AB95DA600B600A2 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

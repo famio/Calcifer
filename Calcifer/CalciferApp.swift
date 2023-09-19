@@ -45,6 +45,7 @@ struct CalciferApp: App {
 class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
     func applicationWillFinishLaunching(_ notification: Notification) {
+        logger.trace(#function)
         NSWindow.allowsAutomaticWindowTabbing = false
     }
 }

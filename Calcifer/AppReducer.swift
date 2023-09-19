@@ -54,22 +54,27 @@ struct AppReducer: Reducer {
 
         switch action {
         case .formatPickerSelected(let format):
+            logger.trace("AppReducer.Action.formatPickerSelected, format:\(format.title)")
             state.format = format
             return .none
 
         case .detailPickerSelected(let detail):
+            logger.trace("AppReducer.Action.detailPickerSelected, detail:\(detail.title)")
             state.detail = detail
             return .none
 
         case .sampleOrderingPickerSelected(let sampleOrdering):
+            logger.trace("AppReducer.Action.sampleOrderingPickerSelected, sampleOrdering:\(sampleOrdering.title)")
             state.sampleOrdering = sampleOrdering
             return .none
 
         case .featureSensitivityPickerSelected(let featureSensitivity):
+            logger.trace("AppReducer.Action.featureSensitivityPickerSelected, featureSensitivity:\(featureSensitivity.title)")
             state.featureSensitivity = featureSensitivity
             return .none
 
         case .openFolderMenuTapped:
+            logger.trace("AppReducer.Action.openFolderMenuTapped")
             state.inputFolderSelecting = true
             return .run { send in
                 await send(
@@ -82,6 +87,7 @@ struct AppReducer: Reducer {
             }
 
         case .inputFolderSelected(.success(let response)):
+            logger.trace("AppReducer.Action.inputFolderSelected.success")
             state.inputFolderSelecting = false
             state.inputFolderUrl = response.directlyUrl
             state.imageCount = response.imageCount
@@ -89,6 +95,7 @@ struct AppReducer: Reducer {
             return .none
 
         case .inputFolderSelected(.failure(let error)):
+            logger.trace("AppReducer.Action.inputFolderSelected.failure error:\(error.localizedDescription)")
             state.inputFolderSelecting = false
             guard let openFolderSelectError = error as? AppFileManager.OpenFolderSelectError else { return .none }
             switch openFolderSelectError {
@@ -103,6 +110,7 @@ struct AppReducer: Reducer {
             return .none
 
         case .goButtonTapped:
+            logger.trace("AppReducer.Action.goButtonTapped")
             guard let inputFolderUrl = state.inputFolderUrl else { return .none }
             switch state.format {
             case .usdz:
@@ -130,6 +138,7 @@ struct AppReducer: Reducer {
             }
 
         case .outputDstSelected(.success(let response)):
+            logger.trace("AppReducer.Action.outputDstSelected.success")
             guard let inputFolderUrl = state.inputFolderUrl else { return .none }
             state.progressRatio = 0
             state.isProcessing = true
@@ -151,6 +160,7 @@ struct AppReducer: Reducer {
             }
 
         case .outputDstSelected(.failure(let error)):
+            logger.trace("AppReducer.Action.outputDstSelected.failure error:\(error.localizedDescription)")
             guard let openFolderSelectError = error as? AppFileManager.OutputFileSelectError else { return .none }
             switch openFolderSelectError {
             case .other:
@@ -163,6 +173,7 @@ struct AppReducer: Reducer {
             }
 
         case .photogrammetryStartResponse(.success(let response)):
+            logger.trace("AppReducer.Action.photogrammetryStartResponse.success")
             state.isDisableCancelButton = false
             return .run { send in
                 for await result in try Photogrammetry.process(session: response.session,
@@ -173,6 +184,7 @@ struct AppReducer: Reducer {
             }.cancellable(id: PhotogrammetryClientId())
 
         case .photogrammetryStartResponse(.failure(let error)):
+            logger.trace("AppReducer.Action.photogrammetryStartResponse.failure error:\(error.localizedDescription)")
             state.isProcessing = false
             state.isDisableCancelButton = false
             return .send(
@@ -180,10 +192,12 @@ struct AppReducer: Reducer {
             )
 
         case .cancelButtonTapped:
+            logger.trace("AppReducer.Action.cancelButtonTapped")
             state.isProcessing = false
             return .cancel(id: PhotogrammetryClientId())
 
         case .photogrammetryProcessResponse(.success(let response)):
+            logger.trace("AppReducer.Action.photogrammetryProcessResponse.success")
             switch response {
             case .progress(let rate):
                 state.progressRatio = rate
@@ -194,12 +208,14 @@ struct AppReducer: Reducer {
             return .none
 
         case .photogrammetryProcessResponse(.failure(let error)):
+            logger.trace("AppReducer.Action.photogrammetryProcessResponse.failure error:\(error.localizedDescription)")
             state.isProcessing = false
             return .send(
                 .showErrorAlert(message: error.localizedDescription)
             )
 
         case .showErrorAlert(let message):
+            logger.trace("AppReducer.Action.showErrorAlert message:\(message)")
             state.alert = .init(
                 title: { TextState("Error") },
                 actions: {
@@ -210,6 +226,7 @@ struct AppReducer: Reducer {
             return .none
 
         case .alert:
+            logger.trace("AppReducer.Action.alert")
             return .none
         }
     }
