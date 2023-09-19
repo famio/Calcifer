@@ -9,7 +9,12 @@ import ComposableArchitecture
 import RealityKit
 import SwiftUI
 
+typealias Detail = PhotogrammetrySession.Request.Detail
+typealias SampleOrdering = PhotogrammetrySession.Configuration.SampleOrdering
+typealias FeatureSensitivity = PhotogrammetrySession.Configuration.FeatureSensitivity
+
 enum Format: String, CaseIterable {
+
     case usdz
     case usdaAndObj
 
@@ -23,86 +28,71 @@ enum Format: String, CaseIterable {
     }
 }
 
-enum Detail: String, CaseIterable {
-    case preview
-    case reduced
-    case medium
-    case full
-    case raw
+extension Detail {
 
     var title: String {
         switch self {
+
         case .preview:
             return "Preview"
+
         case .reduced:
             return "Reduced"
+
         case .medium:
             return "Medium"
+
         case .full:
             return "Full"
+
         case .raw:
             return "Raw"
+
+        case .custom:
+            return "Custom"
+
+        @unknown default:
+            return "Unknown"
         }
     }
 
-    var requestCase: PhotogrammetrySession.Request.Detail {
-        switch self {
-        case .preview:
-            return .preview
-        case .reduced:
-            return .reduced
-        case .medium:
-            return .medium
-        case .full:
-            return .full
-        case .raw:
-            return .raw
-        }
-    }
+    static let candidates: [Self] = [.preview, .reduced, .medium, .full, .raw]
 }
 
-enum SampleOrdering: String, CaseIterable {
-    case unordered
-    case sequential
+extension SampleOrdering {
 
     var title: String {
         switch self {
+
         case .unordered:
             return "Unordered"
+
         case .sequential:
             return "Sequential"
+
+        @unknown default:
+            return "Unknown"
         }
     }
 
-    var configurationCase: PhotogrammetrySession.Configuration.SampleOrdering {
-        switch self {
-        case .unordered:
-            return .unordered
-        case .sequential:
-            return .sequential
-        }
-    }
+    static let candidates: [Self] = [.unordered, .sequential]
 }
 
-enum FeatureSensitivity: String, CaseIterable {
-    case normal
-    case high
+extension FeatureSensitivity {
 
     var title: String {
         switch self {
+
         case .normal:
             return "Normal"
+
         case .high:
             return "High"
+
+        @unknown default:
+            return "Unknown"
         }
     }
 
-    var configurationCase: PhotogrammetrySession.Configuration.FeatureSensitivity {
-        switch self {
-        case .normal:
-            return .normal
-        case .high:
-            return .high
-        }
-    }
+    static let candidates: [Self] = [.normal, .high]
 }

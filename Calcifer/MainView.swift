@@ -77,7 +77,7 @@ struct MainView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Sample Orderling").bold().foregroundColor(Color.secondary)
                     Picker("Sample Orderling", selection: viewStore.binding(get: { $0.sampleOrdering }, send: { .sampleOrderingPickerSelected($0) })) {
-                        ForEach(SampleOrdering.allCases, id: \.self) { detail in
+                        ForEach(SampleOrdering.candidates, id: \.self) { detail in
                             Text(detail.title)
                                 .tag(detail)
                         }
@@ -99,7 +99,7 @@ struct MainView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Detail").bold().foregroundColor(Color.secondary)
                     Picker("Detail", selection: viewStore.binding(get: { $0.detail }, send: { .detailPickerSelected($0) })) {
-                        ForEach(Detail.allCases, id: \.self) { detail in
+                        ForEach(Detail.candidates, id: \.self) { detail in
                             Text(detail.title)
                                 .tag(detail)
                         }

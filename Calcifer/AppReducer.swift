@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import RealityKit
 import SwiftUI
 
 struct AppReducer: Reducer {
@@ -13,7 +14,6 @@ struct AppReducer: Reducer {
     struct State: Equatable {
         var format: Format = .usdz
         var detail: Detail = .medium
-
         var sampleOrdering: SampleOrdering = .unordered
         var featureSensitivity: FeatureSensitivity = .normal
         var inputFolderUrl: URL?
@@ -106,7 +106,7 @@ struct AppReducer: Reducer {
             guard let inputFolderUrl = state.inputFolderUrl else { return .none }
             switch state.format {
             case .usdz:
-                let fileName = inputFolderUrl.lastPathComponent + "_" + state.detail.rawValue + ".usdz"
+                let fileName = inputFolderUrl.lastPathComponent + "_" + state.detail.title.lowercased() + ".usdz"
                 return .run { send in
                     await send(
                         .outputDstSelected(
@@ -135,9 +135,9 @@ struct AppReducer: Reducer {
             state.isProcessing = true
             state.isDisableCancelButton = true
 
-            let detail = state.detail.requestCase
-            let sampleOrdering = state.sampleOrdering.configurationCase
-            let featureSensitivity = state.featureSensitivity.configurationCase
+            let detail = state.detail
+            let sampleOrdering = state.sampleOrdering
+            let featureSensitivity = state.featureSensitivity
             return .run { send in
                 await send(.photogrammetryStartResponse(
                     TaskResult {
