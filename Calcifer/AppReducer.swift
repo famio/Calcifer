@@ -48,6 +48,8 @@ struct AppReducer: Reducer {
         }
     }
 
+    @Dependency(\.photogrammetryClient) var photogrammetryClient
+
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
 
         struct PhotogrammetryClientId: Hashable {}
@@ -144,17 +146,15 @@ struct AppReducer: Reducer {
             state.isProcessing = true
             state.isDisableCancelButton = true
 
-            let detail = state.detail
-            let sampleOrdering = state.sampleOrdering
-            let featureSensitivity = state.featureSensitivity
+            let startSessionParams = Photogrammetry.StartSessionParameters(inputFolderUrl: inputFolderUrl,
+                                                                           outputDstUrl: response.selectedUrl,
+                                                                           detail: state.detail,
+                                                                           sampleOrdering: state.sampleOrdering,
+                                                                           featureSensitivity: state.featureSensitivity)
             return .run { send in
                 await send(.photogrammetryStartResponse(
                     TaskResult {
-                        try Photogrammetry.startSession(inputFolderUrl: inputFolderUrl,
-                                                        outputDstUrl: response.selectedUrl,
-                                                        detail: detail,
-                                                        sampleOrdering: sampleOrdering,
-                                                        featureSensitivity: featureSensitivity)
+                        try photogrammetryClient.startSession(startSessionParams)
                     }
                 ))
             }
@@ -175,10 +175,11 @@ struct AppReducer: Reducer {
         case .photogrammetryStartResponse(.success(let response)):
             logger.trace("AppReducer.Action.photogrammetryStartResponse.success")
             state.isDisableCancelButton = false
+            let bindProcessParams = Photogrammetry.BindProcessParameters(session: response.session,
+                                                                         outputDstUrl: response.outputDstUrl,
+                                                                         tmpFileUrl: response.tmpFileUrl)
             return .run { send in
-                for await result in try Photogrammetry.process(session: response.session,
-                                                               outputDstUrl: response.outputDstUrl,
-                                                               tmpFileUrl: response.tmpFileUrl) {
+                for await result in try photogrammetryClient.bindProcess(bindProcessParams) {
                     await send(.photogrammetryProcessResponse(result))
                 }
             }.cancellable(id: PhotogrammetryClientId())

@@ -22,6 +22,7 @@
 		D1ACCACC2A95A6700022288D /* Photogrammetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ACCACB2A95A6700022288D /* Photogrammetry.swift */; };
 		D1C023CC274C07DD0058F867 /* NSImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C023CB274C07DD0058F867 /* NSImage+.swift */; };
 		D1C0C45C2AB95DA600B600A2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0C45B2AB95DA600B600A2 /* Logger.swift */; };
+		D1C0C45E2AB981F300B600A2 /* PhotogrammetryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0C45D2AB981F300B600A2 /* PhotogrammetryClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		D1ACCACB2A95A6700022288D /* Photogrammetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photogrammetry.swift; sourceTree = "<group>"; };
 		D1C023CB274C07DD0058F867 /* NSImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+.swift"; sourceTree = "<group>"; };
 		D1C0C45B2AB95DA600B600A2 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		D1C0C45D2AB981F300B600A2 /* PhotogrammetryClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotogrammetryClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				D147529F272E67FB001108BD /* CalciferApp.swift */,
 				D14752A1272E67FB001108BD /* MainView.swift */,
 				D145B887272EF56A00BB14AB /* AppReducer.swift */,
+				D1C0C45D2AB981F300B600A2 /* PhotogrammetryClient.swift */,
 				D145B88B272EF5F700BB14AB /* AppState.swift */,
 				D12AF9F92736F95C009F18EE /* AppFileManager.swift */,
 				D1ACCACB2A95A6700022288D /* Photogrammetry.swift */,
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C0C45E2AB981F300B600A2 /* PhotogrammetryClient.swift in Sources */,
 				D14752A2272E67FB001108BD /* MainView.swift in Sources */,
 				D14752A0272E67FB001108BD /* CalciferApp.swift in Sources */,
 				D12AF9FA2736F95C009F18EE /* AppFileManager.swift in Sources */,
