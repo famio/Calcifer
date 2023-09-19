@@ -9,28 +9,10 @@ import ComposableArchitecture
 import RealityKit
 import SwiftUI
 
-struct AppState: Equatable {
-    var format: Format = .usdz
-    var detail: Detail = .medium
-    
-    var sampleOrdering: SampleOrdering = .unordered
-    var featureSensitivity: FeatureSensitivity = .normal
-    var inputFolderUrl: URL?
-    var inputFolderSelecting = false
-    var outputFileUrl: URL?
-    var isProcessing = false
-    var progressRatio: Double = 0
-    
-    var alert: AlertState<AppAction>?
-    
-    var imageCount: Int = 0
-    var thumbnail: CGImage?
-}
-
 enum Format: String, CaseIterable {
     case usdz
     case usdaAndObj
-    
+
     var title: String {
         switch self {
         case .usdz:
@@ -47,7 +29,7 @@ enum Detail: String, CaseIterable {
     case medium
     case full
     case raw
-    
+
     var title: String {
         switch self {
         case .preview:
@@ -62,7 +44,7 @@ enum Detail: String, CaseIterable {
             return "Raw"
         }
     }
-    
+
     var requestCase: PhotogrammetrySession.Request.Detail {
         switch self {
         case .preview:
@@ -82,7 +64,7 @@ enum Detail: String, CaseIterable {
 enum SampleOrdering: String, CaseIterable {
     case unordered
     case sequential
-    
+
     var title: String {
         switch self {
         case .unordered:
@@ -91,7 +73,7 @@ enum SampleOrdering: String, CaseIterable {
             return "Sequential"
         }
     }
-    
+
     var configurationCase: PhotogrammetrySession.Configuration.SampleOrdering {
         switch self {
         case .unordered:
@@ -105,7 +87,7 @@ enum SampleOrdering: String, CaseIterable {
 enum FeatureSensitivity: String, CaseIterable {
     case normal
     case high
-    
+
     var title: String {
         switch self {
         case .normal:
@@ -114,7 +96,7 @@ enum FeatureSensitivity: String, CaseIterable {
             return "High"
         }
     }
-    
+
     var configurationCase: PhotogrammetrySession.Configuration.FeatureSensitivity {
         switch self {
         case .normal:

@@ -8,15 +8,15 @@
 import AppKit
 
 extension NSImage {
-    
+
     var cgImage: CGImage? {
         var proposedRect = CGRect(origin: .zero, size: size)
-        
+
         return cgImage(forProposedRect: &proposedRect,
                        context: nil,
                        hints: nil)
     }
-    
+
     func resized(maxLength: CGFloat) -> NSImage? {
         let width, height: CGFloat
         if self.size.width < self.size.height {
@@ -33,7 +33,7 @@ extension NSImage {
         }
         return resized(to: .init(width: width, height: height))
     }
-    
+
     func resized(to newSize: NSSize) -> NSImage? {
         if let bitmapRep = NSBitmapImageRep(
             bitmapDataPlanes: nil, pixelsWide: Int(newSize.width), pixelsHigh: Int(newSize.height),

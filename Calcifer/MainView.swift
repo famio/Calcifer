@@ -11,15 +11,15 @@ import AVFoundation
 import RealityKit
 
 struct MainView: View {
-    
-    let store: Store<AppState, AppAction>
-    
+
+    let store: StoreOf<AppReducer>
+
     private let pickerWidth: CGFloat = 400
-    
+
     var body: some View {
-        WithViewStore(store) { viewStore in
+        WithViewStore(store, observe: { $0 }) { viewStore in
             VStack(alignment: .center, spacing: 18, content: {
-                
+
                 // Inputフォルダ
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Input Folder").bold().foregroundColor(.secondary)
@@ -61,7 +61,7 @@ struct MainView: View {
                     }
                     .disabled(viewStore.isProcessing)
                 }
-                
+
                 // Format
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Format").bold().foregroundColor(Color.secondary)
@@ -73,7 +73,7 @@ struct MainView: View {
                     }
                     .disabled(viewStore.isProcessing)
                 }
-                
+
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Sample Orderling").bold().foregroundColor(Color.secondary)
                     Picker("Sample Orderling", selection: viewStore.binding(get: { $0.sampleOrdering }, send: { .sampleOrderingPickerSelected($0) })) {
@@ -84,7 +84,7 @@ struct MainView: View {
                     }
                     .disabled(viewStore.isProcessing)
                 }
-                
+
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Feature Sensitivity").bold().foregroundColor(Color.secondary)
                     Picker("", selection: viewStore.binding(get: { $0.featureSensitivity }, send: { .featureSensitivityPickerSelected($0) })) {
@@ -94,7 +94,7 @@ struct MainView: View {
                     }
                     .disabled(viewStore.isProcessing)
                 }
-                
+
                 // Detail
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Detail").bold().foregroundColor(Color.secondary)
@@ -106,7 +106,7 @@ struct MainView: View {
                     }
                     .disabled(viewStore.isProcessing)
                 }
-                
+
                 if viewStore.isProcessing {
                     VStack {
                         // キャンセルボタン
@@ -118,6 +118,7 @@ struct MainView: View {
                                            height: 40)
                             }
                             .buttonStyle(CancelButtonStyle())
+                            .disabled(viewStore.isDisableCancelButton)
                         // プログレスバー
                         HStack(alignment: .center, spacing: 8) {
                             Text("\(Int(viewStore.progressRatio * 100)) %")
@@ -146,10 +147,7 @@ struct MainView: View {
                 .padding()
                 .disabled(viewStore.inputFolderSelecting)
         }
-        .alert(
-            self.store.scope(state: { $0.alert }),
-            dismiss: .alertDismissed
-        )
+        .alert(store: store.scope(state: \.$alert, action: { .alert($0) }))
     }
 }
 
@@ -157,7 +155,7 @@ struct VisualEffectView: NSViewRepresentable {
     let material: NSVisualEffectView.Material
     let blendingMode: NSVisualEffectView.BlendingMode
     let alpha: CGFloat
-    
+
     func makeNSView(context: Context) -> NSVisualEffectView {
         let visualEffectView = NSVisualEffectView()
         visualEffectView.material = material
@@ -174,9 +172,8 @@ struct VisualEffectView: NSViewRepresentable {
 }
 
 struct GoButtonStyle: ButtonStyle {
-    
     @Environment(\.isEnabled) var isEnabled: Bool
-    
+
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .foregroundColor(isEnabled ? .primary : .secondary)
@@ -206,15 +203,8 @@ struct CancelButtonStyle: ButtonStyle {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView(
-            store: Store(
-                initialState: AppState(),
-                reducer: appReducer,
-                environment: .init(fileManagerEffect: .live,
-                                   photogrammetryEffect: .live)
-            )
-        )
-    }
+#Preview {
+    MainView(store: Store(initialState: AppReducer.State()) {
+        AppReducer()
+    })
 }
